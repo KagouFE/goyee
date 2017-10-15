@@ -1,5 +1,5 @@
 # Vue2 
-## Usage
+### Usage
 ``` javascript
 import Vue from 'vue';
 import goyee from 'goyee';
@@ -8,11 +8,16 @@ Vue.use(goyee);
 ```
 
 ### Filters
-#### sum
 ``` javascript
+// sum =======================
 {{ [1,2,3] | sum }}
 // => 6
 
 {{ [{num:2}, {num:3}] | sum('num') }}
 // => 5
+
+// uppercase =======================
+{{ 'abc' | uppercase }}
+// => ABC
+
 ```
