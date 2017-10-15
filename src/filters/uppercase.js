@@ -1,7 +1,5 @@
-// 全部变为大写
+import util from '../util'
+
 export default function uppercase(val) {
-    if (typeof val !== 'string') {
-        return val.toUpperCase()
-    }
-    return val
+    return util.toUpper(val)
 }

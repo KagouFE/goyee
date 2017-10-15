@@ -9,16 +9,14 @@ function each(obj, func) {
 }
 
 const goyee = {
-    install(Vue) {
-        each(fiters, key => {
+    install: function (Vue) {
+        each(filters, key => {
             Vue.filter(key, filters[key])
         })
 
-        Vue.prototype.goyee = util
+        Vue.prototype.$goyee = util
     }
 }
-
-console.log(util.moment().add(15, 'hour').format('l'))
 
 export default goyee
 
