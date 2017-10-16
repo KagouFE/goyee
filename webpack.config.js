@@ -33,7 +33,7 @@ module.exports = {
         // new webpack.BannerPlugin('版权所有，翻版必究'),
         // new HtmlWebpackPlugin(),
         // new webpack.HotModuleReplacementPlugin(),
-        // new webpack.optimize.OccurrenceOrderPlugin(),
-        // new webpack.optimize.UglifyJsPlugin(),
+        new webpack.optimize.OccurrenceOrderPlugin(),
+        new webpack.optimize.UglifyJsPlugin(),
     ],
 };

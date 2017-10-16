@@ -1,6 +1,6 @@
 {
   "name": "goyee",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "vue2 filters",
   "scripts": {
     "dev": "webpack",
@@ -34,13 +34,7 @@
     "webpack-dev-server": "^2.9.1"
   },
   "dependencies": {
-    "lodash.clonedeep": "^4.5.0",
-    "lodash.find": "^4.6.0",
-    "lodash.isequal": "^4.5.0",
-    "lodash.sum": "^4.0.2",
-    "lodash.toupper": "^4.1.2",
-    "lodash.union": "^4.6.0",
-    "lodash.uniq": "^4.5.0",
+    "lodash": "^4.17.4",
     "moment": "^2.19.1"
   }
 }
