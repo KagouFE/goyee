@@ -14,7 +14,13 @@ const goyee = {
             Vue.filter(key, filters[key])
         })
 
-        Vue.prototype.$goyee = util
+        Object.defineProperties(Vue.prototype, {
+			$goyee: {
+				get: function() {
+					return util
+				},
+			},
+		})
     }
 }
 
