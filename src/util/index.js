@@ -18,13 +18,20 @@ const date = (val, opt = 'default') => {
         dateTime: 'YYYY-MM-DD HH:mm',
         longDateTime: 'YYYY-MM-DD HH:mm:ss',
         time: 'HH:mm',
-        'date-en': 'MMM DD, YYYY'
+        'date-en': 'MMM DD, YYYY',
+        timestamp: 'x'
     }
 
-    // 以后可以穿 object 进来， object.format 就是格式名称
+    // 以后可以传 object 进来， object.format 就是格式名称
     const formatType = typeof opt === 'string' ? opt : opt.format
     const format = formats[formatType] || formatType
-    return moment(val).format(format)
+    // 返回的是 string 类型
+    const ret = moment(val).format(format)
+    // 时间戳需要 number 类型
+    if (formatType === 'timestamp') {
+        return parseInt(ret)
+    }
+    return ret
 }
 
 // 数字格式化
@@ -36,20 +43,20 @@ const numeric = (value, decimals) => {
     decimals = decimals != null ? decimals : 2
     var stringified = Math.abs(value).toFixed(decimals)
     console.log(stringified.slice(0, -1 - decimals))
-    
+
     var _int = stringified.slice(0, -1 - decimals)
     var i = _int.length % 3
     var head = i > 0
-      ? (_int.slice(0, i) + (_int.length > 3 ? ',' : ''))
-      : ''
+        ? (_int.slice(0, i) + (_int.length > 3 ? ',' : ''))
+        : ''
     var _float = decimals
-      ? stringified.slice(-1 - decimals)
-      : ''
+        ? stringified.slice(-1 - decimals)
+        : ''
     var sign = value < 0 ? '-' : ''
     return sign + head +
-      _int.slice(i).replace(digitsRE, '$1,') +
-      _float
-  }
+        _int.slice(i).replace(digitsRE, '$1,') +
+        _float
+}
 
 const util = {
     moment,
