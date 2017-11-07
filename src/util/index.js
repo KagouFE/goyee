@@ -66,6 +66,20 @@ const util = {
 }
 
 const mergedUtil = Object.assign(util, lodash)
+
+mergedUtil.sum = (arr, keyName) => {
+    if(!Array.isArray(arr)){
+        console.error('sum 只支持 array 类型')
+        return arr
+    }
+
+    if (keyName) {
+        return lodash.sumBy(arr, keyName)
+    } else {
+        return lodash.sum(arr)
+    }
+}
+
 // lodash 自带了 VERSION , 把它改成自己的
 mergedUtil.VERSION = '0.1.0'
 
