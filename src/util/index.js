@@ -19,7 +19,8 @@ const date = (val, opt = 'default') => {
         longDateTime: 'YYYY-MM-DD HH:mm:ss',
         time: 'HH:mm',
         'date-en': 'MMM DD, YYYY',
-        timestamp: 'x'
+        timestamp: 'x',
+        date: ''
     }
 
     // 以后可以传 object 进来， object.format 就是格式名称

@@ -44,4 +44,14 @@ this.$goyee.sum([2,3])
 // custom format
 {{ 1508143679588 | date('YYYY / MM / DD')}}
 // =>  2017 / 10 / 16
+
+this.$goyee.date(new date(), 'timestamp')
+// => 1508143679588 转成毫秒级时间戳
+```
+
+### 单独使用里面的方法
+``` javascript
+import {util} from 'goyee'
+util.sum([2,3,4])
+// => 9
 ```
