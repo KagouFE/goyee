@@ -10,7 +10,7 @@
   "main": "src/index.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/KagouFE/vue-filters.git"
+    "url": "git+https://github.com/KagouFE/goyee.git"
   },
   "keywords": [
     "vue2",
@@ -19,9 +19,9 @@
   "author": "FEN",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/KagouFE/vue-filters/issues"
+    "url": "https://github.com/KagouFE/goyee/issues"
   },
-  "homepage": "https://github.com/KagouFE/vue-filters#readme",
+  "homepage": "https://github.com/KagouFE/goyee#readme",
   "devDependencies": {
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",
