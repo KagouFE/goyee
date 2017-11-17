@@ -43,7 +43,6 @@ const numeric = (value, decimals) => {
     // currency = currency != null ? currency : '$'
     decimals = decimals != null ? decimals : 2
     var stringified = Math.abs(value).toFixed(decimals)
-    console.log(stringified.slice(0, -1 - decimals))
 
     var _int = stringified.slice(0, -1 - decimals)
     var i = _int.length % 3

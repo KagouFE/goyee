@@ -10,7 +10,10 @@ module.exports = {
     entry: __dirname + "/src/index.js", //已多次提及的唯一入口文件
     output: {
         path: __dirname + "/dist",
-        filename: "index.js"
+        filename: "goyee.min.js",
+        library: 'goyee',
+        libraryTarget: 'umd',
+        umdNamedDefine: true
     },
     devtool: 'none',
     devServer: {

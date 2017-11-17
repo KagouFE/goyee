@@ -23,9 +23,10 @@ const goyee = {
 		})
     }
 }
-export {util}
-export default goyee
 
 if (typeof window !== 'undefined' && window.Vue) {
     window.Vue.use(goyee);
 }
+
+export {util}
+export default goyee
